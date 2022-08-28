@@ -19,7 +19,7 @@ def smallest_multiple_1(initial, start, end):
     t = time.time()
     primes = []
     not_primes = []
-    common_factors = []
+    factors = []
 
     # Obtain the list of primes, non-primes and common factors
     for i in range(start, end + 1):
@@ -34,8 +34,8 @@ def smallest_multiple_1(initial, start, end):
             not_primes.append(i)
             for i in not_primes:
                 for j in range(1, i+1):
-                    if i % j == 0 and j not in common_factors:
-                        common_factors.append(j)
+                    if i % j == 0 and j not in factors:
+                        factors.append(j)
     
     # Multiply the number by the primes since they don't share common factors
     for i in primes:
