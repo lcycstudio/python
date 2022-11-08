@@ -16,7 +16,6 @@ def find_that_prime(place):
     primes = [2, 3, 5, 7]
     if place < 5:
         return primes[place - 1]
-    multiples = [121]
     a = 2
     t = time.time()
     factor = 2
